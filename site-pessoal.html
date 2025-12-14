@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página </title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+        }
+
+        header {
+            padding: 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.25s;
+            cursor: pointer;
+            border: 1px solid #333;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            border-color: #6a11cb;
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #2575fc;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #fff;
+            transition: 0.25s;
+        }
+
+        .btn:hover {
+            background: #6a11cb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            margin-top: 40px;
+            color: #bbb;
+        }
+
+        footer a {
+            color: #6a11cb;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Meu Site Pessoal </h1>
+        <p>Bem-vindo(a)! Aqui estão alguns dos meus projetos recentes.</p>
+    </header>
+
+    <div class="container">
+        <h2>Projetos</h2>
+        <div class="projects" id="projectList"></div>
+    </div>
+
+    <footer>
+        Criado por <strong>Yago Avendano Da Costa • Estudante de Ciência da Computação • Desenvolvedor • Entusiasta de Tecnologia</strong> • 
+        <a href="#">LinkedIn</a> • 
+        <a href="#">GitHub</a>
+    </footer>
+
+    <script>
+        const projetos = [
+            {
+                titulo: "Projeto 1",
+                descricao: "Descrição do primeiro projeto. Algo interessante que você fez.",
+                link: "#"
+            },
+            {
+                titulo: "Projeto 2",
+                descricao: "Descrição do segundo projeto. Pode ser um site, app, sistema etc.",
+                link: "#"
+            },
+            {
+                titulo: "Projeto 3",
+                descricao: "Descrição do terceiro projeto. Coloque o que quiser!",
+                link: "#"
+            }
+        ];
+
+        const lista = document.getElementById("projectList");
+
+        projetos.forEach(proj => {
+            const card = document.createElement("div");
+            card.className = "project-card";
+
+            card.innerHTML = `
+                <h3>${proj.titulo}</h3>
+                <p>${proj.descricao}</p>
+                <a class="btn" href="${proj.link}" target="_blank">Ver Projeto</a>
+            `;
+            lista.appendChild(card);
+        });
+    </script>
+    
+    <footer>
+        <p>© 2026 • Yago Avendano – Estudante de Ciência da Computação</p>
+    </footer>
+
+</body>
+</html>
