@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yago Avendano | Portfólio</title>
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-primary: #0d1117;
+      --bg-secondary: #161b22;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --text-primary: #e6edf3;
+      --text-secondary: #9da7b3;
+      --border: #30363d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: linear-gradient(135deg, #4f46e5, #3b82f6);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      padding: 12px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-left: 5px solid var(--accent);
+      padding-left: 15px;
+    }
+
+    /* ===== SOBRE ===== */
+    .sobre p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+    }
+
+    /* ===== SKILLS ===== */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .skill {
+      background: var(--bg-secondary);
+      padding: 15px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    /* ===== PROJETOS ===== */
+    .projetos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 25px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .card h3 {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--text-secondary);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background: var(--accent);
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+    }
+
+    /* ===== CONTATO ===== */
+    .contato p {
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Yago Avendano da Costa</h1>
+    <p>Estudante de Ciência da Computação • Desenvolvedor em Formação</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#skills">Habilidades</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="sobre" class="sobre">
+    <h2>Sobre Mim</h2>
+    <p>
+      Sou estudante do 2º semestre de Ciência da Computação, com foco em desenvolvimento web e lógica de programação.
+      Tenho experiência inicial com criação, edição e estruturação de aplicações web, buscando sempre boas práticas,
+      organização de código e aprendizado contínuo.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Habilidades</h2>
+    <div class="skills">
+      <div class="skill">HTML5 & CSS3</div>
+      <div class="skill">JavaScript Básico</div>
+      <div class="skill">Lógica de Programação</div>
+      <div class="skill">Versionamento (Git)</div>
+      <div class="skill">Responsividade</div>
+      <div class="skill">Aprendizado Contínuo</div>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="projetos">
+      <div class="card">
+        <h3>🌐 Site Pessoal</h3>
+        <p>Portfólio desenvolvido com HTML e CSS para apresentação acadêmica e profissional.</p>
+        <a class="btn" href="site-pessoal.html" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <h2>Contato</h2>
+    <p>Aberto a oportunidades acadêmicas, freelances iniciais e colaborações.</p>
+    <p><strong>Email:</strong> yagotech2025@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>© 2026 • Yago Avendano • Ciência da Computação</p>
+  </footer>
+  
+<script>
+  // Scroll suave para links do menu
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const section = document.querySelector(this.getAttribute('href'));
+      section.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Animação ao aparecer na tela
+  const elements = document.querySelectorAll('section, .card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = '0.6s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
